@@ -48,10 +48,6 @@ public class SysUser extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "主键")
-    @TableId(value = "id", type = IdType.ID_WORKER)
-    private Long id;
-
     @ApiModelProperty(value = "用户名")
     @NotBlank(message = "用户名不能为空")
     private String username;
@@ -76,12 +72,6 @@ public class SysUser extends BaseEntity {
     @ApiModelProperty(value = "头像")
     private String head;
 
-    @ApiModelProperty(value = "备注")
-    private String remark;
-
-    @ApiModelProperty(value = "状态，0：禁用，1：启用，2：锁定")
-    private Integer state;
-
     @ApiModelProperty(value = "部门id")
     @NotNull(message = "部门id不能为空")
     private Long departmentId;
@@ -90,22 +80,6 @@ public class SysUser extends BaseEntity {
     @NotNull(message = "角色id不能为空")
     private Long roleId;
 
-    @ApiModelProperty(value = "逻辑删除，0：未删除，1：已删除")
-    @Null(message = "逻辑删除不用传")
-    @TableLogic
-    private Integer deleted;
 
-    @ApiModelProperty(value = "版本")
-    @Null(message = "版本不用传")
-    @Version
-    private Integer version;
-
-    @ApiModelProperty(value = "创建时间")
-    @Null(message = "创建时间不用传")
-    private Date createTime;
-
-    @ApiModelProperty(value = "修改时间")
-    @Null(message = "修改时间不用传")
-    private Date updateTime;
 
 }

@@ -101,14 +101,14 @@ public class SysUserServiceImpl extends BaseServiceImpl<SysUserMapper, SysUser> 
         }
 
         // 修改系统用户
-        updateSysUser.setNickname(sysUser.getNickname())
-                .setPhone(sysUser.getPhone())
-                .setGender(sysUser.getGender())
-                .setRemark(sysUser.getRemark())
-                .setState(sysUser.getState())
-                .setDepartmentId(sysUser.getDepartmentId())
-                .setRoleId(sysUser.getRoleId())
-                .setUpdateTime(new Date());
+        updateSysUser.setNickname(sysUser.getNickname());
+        updateSysUser.setPhone(sysUser.getPhone());
+        updateSysUser.setGender(sysUser.getGender());
+        updateSysUser.setRemark(sysUser.getRemark());
+        updateSysUser.setState(sysUser.getState());
+        updateSysUser.setDepartmentId(sysUser.getDepartmentId());
+        updateSysUser.setRoleId(sysUser.getRoleId());
+        updateSysUser.setUpdateTime(new Date());
         return super.updateById(updateSysUser);
     }
 
@@ -152,9 +152,9 @@ public class SysUserServiceImpl extends BaseServiceImpl<SysUserMapper, SysUser> 
 
     @Override
     public boolean isExistsSysUserByRoleId(Long roleId) throws Exception {
-        SysUser sysUser = new SysUser()
-                .setState(StateEnum.ENABLE.getCode())
-                .setRoleId(roleId);
+        SysUser sysUser = new SysUser();
+        sysUser.setState(StateEnum.ENABLE.getCode());
+        sysUser.setRoleId(roleId);
         return sysUserMapper.selectCount(new QueryWrapper(sysUser)) > 0;
     }
 
@@ -195,9 +195,9 @@ public class SysUserServiceImpl extends BaseServiceImpl<SysUserMapper, SysUser> 
 
     @Override
     public boolean updateSysUserHead(Long id, String headPath) throws Exception {
-        SysUser sysUser = new SysUser()
-                .setId(id)
-                .setHead(headPath);
+        SysUser sysUser = new SysUser();
+        sysUser.setId(id);
+        sysUser.setHead(headPath);
         return updateById(sysUser);
     }
 }

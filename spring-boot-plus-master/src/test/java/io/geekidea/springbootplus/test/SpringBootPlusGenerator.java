@@ -42,7 +42,7 @@ public class SpringBootPlusGenerator {
         // 组件作者等配置
         codeGenerator
                 .setModuleName("foobar")
-                .setAuthor("geekidea")
+                .setAuthor("zjl")
                 .setPkIdColumnName("id");
 
         // 生成策略

@@ -46,10 +46,6 @@ public class SysDepartment extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "主键")
-    @TableId(value = "id", type = IdType.ID_WORKER)
-    private Long id;
-
     @ApiModelProperty(value = "部门名称")
     @NotBlank(message = "部门名称不能为空")
     private String name;
@@ -57,26 +53,5 @@ public class SysDepartment extends BaseEntity {
     @ApiModelProperty(value = "父id")
     private Long parentId;
 
-    @ApiModelProperty(value = "状态，0：禁用，1：启用")
-    private Integer state;
-
-    @ApiModelProperty(value = "排序")
-    private Integer sort;
-
-    @ApiModelProperty(value = "备注")
-    private String remark;
-
-    @ApiModelProperty(value = "版本")
-    @Null(message = "版本不用传")
-    @Version
-    private Integer version;
-
-    @ApiModelProperty(value = "创建时间")
-    @Null(message = "创建时间不用传")
-    private Date createTime;
-
-    @ApiModelProperty(value = "修改时间")
-    @Null(message = "修改时间不用传")
-    private Date updateTime;
 
 }
