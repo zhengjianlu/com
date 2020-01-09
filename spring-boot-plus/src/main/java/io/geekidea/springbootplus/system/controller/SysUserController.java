@@ -47,7 +47,7 @@ import javax.validation.Valid;
 @Slf4j
 @RestController
 @RequestMapping("/sysUser")
-@Api("系统用户 API")
+@Api(value = "系统用户 API",description = "系统用户 API")
 public class SysUserController extends BaseController {
 
     @Autowired
@@ -103,7 +103,7 @@ public class SysUserController extends BaseController {
     /**
      * 系统用户分页列表
      */
-     @PostMapping("/getPageList")
+    @PostMapping("/getPageList")
 //    @RequiresPermissions("sys:user:page")
     @ApiOperation(value = "获取SysUser分页列表", notes = "系统用户分页列表", response = SysUserQueryVo.class)
     public ApiResult<Paging<SysUserQueryVo>> getSysUserPageList(@Valid @RequestBody SysUserQueryParam sysUserQueryParam) throws Exception {

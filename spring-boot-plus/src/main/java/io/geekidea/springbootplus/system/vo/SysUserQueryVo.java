@@ -56,7 +56,7 @@ public class SysUserQueryVo implements Serializable {
     @ApiModelProperty(value = "头像")
     private String head;
 
-    @ApiModelProperty(value = "remark")
+    @ApiModelProperty(value = "备注")
     private String remark;
 
     @ApiModelProperty(value = "状态，0：禁用，1：启用，2：锁定")

@@ -34,6 +34,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @author geekidea
  * @since 2018-11-08
  */
+
 @EnableAsync
 @EnableScheduling
 @EnableTransactionManagement
