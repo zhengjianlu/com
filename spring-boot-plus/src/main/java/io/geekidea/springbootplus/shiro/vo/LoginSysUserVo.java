@@ -67,7 +67,11 @@ public class LoginSysUserVo implements Serializable {
     @ApiModelProperty("角色编码")
     private String roleCode;
 
+    @ApiModelProperty("角色编码")
+    private Long createId;
+
     @ApiModelProperty("权限编码列表")
     private Set<String> permissionCodes;
+
 
 }

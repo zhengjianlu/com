@@ -24,6 +24,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 
 /**
  * <p>
@@ -35,9 +37,8 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
-@EqualsAndHashCode(callSuper = true)
 @ApiModel(value = "Ip对象", description = "IP地址")
-public class Ip extends BaseEntity {
+public class Ip  implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

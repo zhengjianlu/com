@@ -16,10 +16,7 @@
 
 package io.geekidea.springbootplus.common.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.Version;
+import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -46,8 +43,6 @@ public class BaseEntity implements Serializable {
     @ApiModelProperty(value = "备注")
     private String remark;
 
-    @ApiModelProperty(value = "排序")
-    private Integer sort;
 
     @ApiModelProperty(value = "状态，0：禁用，1：启用，2：锁定")
     private Integer state;
@@ -63,6 +58,7 @@ public class BaseEntity implements Serializable {
     private Integer version;
 
     @ApiModelProperty(value = "创建人ID")
+    @TableField(fill = FieldFill.INSERT)
     private Long createId;
 
     @ApiModelProperty(value = "创建时间")
@@ -70,9 +66,13 @@ public class BaseEntity implements Serializable {
     private Date createTime;
 
     @ApiModelProperty(value = "修改人ID")
+    @TableField(fill = FieldFill.UPDATE)
     private Long updateId;
 
     @ApiModelProperty(value = "修改时间")
     @Null(message = "修改时间不用传")
     private Date updateTime;
+
+    @ApiModelProperty(value = "排序")
+    private Integer sort;
 }

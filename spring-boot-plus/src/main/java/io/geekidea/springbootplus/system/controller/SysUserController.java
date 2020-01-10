@@ -35,6 +35,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
+import java.time.LocalDateTime;
 
 /**
  * <pre>
@@ -60,7 +61,7 @@ public class SysUserController extends BaseController {
      * 添加系统用户
      */
     @PostMapping("/add")
-    @RequiresPermissions("sys:user:add")
+//    @RequiresPermissions("sys:user:add")
     @ApiOperation(value = "添加SysUser对象", notes = "添加系统用户", response = ApiResult.class)
     public ApiResult<Boolean> addSysUser(@Valid @RequestBody SysUser sysUser) throws Exception {
         boolean flag = sysUserService.saveSysUser(sysUser);

@@ -42,7 +42,7 @@ import javax.validation.Valid;
  * @date 2019-09-28
  * @since 1.3.0.RELEASE
  **/
-@Api("登陆控制器")
+@Api(value = "登陆控制器 API",description = "登陆控制器 API")
 @Slf4j
 @RestController
 public class LoginController {
