@@ -82,17 +82,17 @@ public class SysPermissionServiceImpl extends BaseServiceImpl<SysPermissionMappe
         }
 
         // 指定需改的字段
-        updateSysPermission.setParentId(sysPermission.getParentId())
-                .setLevel(sysPermission.getLevel())
-                .setName(sysPermission.getName())
-                .setState(sysPermission.getState())
-                .setCode(sysPermission.getCode())
-                .setIcon(sysPermission.getIcon())
-                .setRemark(sysPermission.getRemark())
-                .setSort(sysPermission.getSort())
-                .setType(sysPermission.getType())
-                .setUrl(sysPermission.getUrl())
-                .setUpdateTime(new Date());
+        updateSysPermission.setParentId(sysPermission.getParentId());
+        updateSysPermission.setLevel(sysPermission.getLevel());
+        updateSysPermission.setName(sysPermission.getName());
+        updateSysPermission.setState(sysPermission.getState());
+        updateSysPermission.setCode(sysPermission.getCode());
+        updateSysPermission.setIcon(sysPermission.getIcon());
+        updateSysPermission.setRemark(sysPermission.getRemark());
+        updateSysPermission.setSort(sysPermission.getSort());
+        updateSysPermission.setType(sysPermission.getType());
+        updateSysPermission.setUrl(sysPermission.getUrl());
+        updateSysPermission.setUpdateTime(new Date());
         return super.updateById(updateSysPermission);
     }
 
@@ -127,7 +127,8 @@ public class SysPermissionServiceImpl extends BaseServiceImpl<SysPermissionMappe
 
     @Override
     public List<SysPermission> getAllMenuList() throws Exception {
-        SysPermission sysPermission = new SysPermission().setState(StateEnum.ENABLE.getCode());
+        SysPermission sysPermission = new SysPermission();
+        sysPermission.setState(StateEnum.ENABLE.getCode());
         // 获取所有已启用的权限列表
         return sysPermissionMapper.selectList(new QueryWrapper(sysPermission));
     }

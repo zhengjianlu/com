@@ -53,10 +53,10 @@ public class SysRolePermissionServiceImpl extends BaseServiceImpl<SysRolePermiss
     public boolean saveSysRolePermission(Long roleId, List<Long> permissionIds) throws Exception {
         List<SysRolePermission> list = new ArrayList<>();
         permissionIds.forEach(permissionId -> {
-            SysRolePermission sysRolePermission = new SysRolePermission()
-                    .setRoleId(roleId)
-                    .setPermissionId(permissionId)
-                    .setState(StateEnum.ENABLE.getCode());
+            SysRolePermission sysRolePermission = new SysRolePermission();
+            sysRolePermission.setRoleId(roleId);
+            sysRolePermission.setPermissionId(permissionId);
+            sysRolePermission.setState(StateEnum.ENABLE.getCode());
             list.add(sysRolePermission);
         });
         // 批量保存角色权限中间表
@@ -65,9 +65,9 @@ public class SysRolePermissionServiceImpl extends BaseServiceImpl<SysRolePermiss
 
     @Override
     public List<Long> getPermissionIdsByRoleId(Long roleId) throws Exception {
-        SysRolePermission sysRolePermission = new SysRolePermission()
-                .setRoleId(roleId)
-                .setState(StateEnum.ENABLE.getCode());
+        SysRolePermission sysRolePermission = new SysRolePermission();
+        sysRolePermission.setRoleId(roleId);
+        sysRolePermission.setState(StateEnum.ENABLE.getCode());
         QueryWrapper queryWrapper = new QueryWrapper(sysRolePermission, "permission_id");
         return sysRolePermissionMapper.selectObjs(queryWrapper);
     }
