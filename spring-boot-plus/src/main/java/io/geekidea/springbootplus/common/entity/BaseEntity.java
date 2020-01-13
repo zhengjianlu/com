@@ -43,19 +43,15 @@ public class BaseEntity implements Serializable {
     @ApiModelProperty(value = "备注")
     private String remark;
 
-
     @ApiModelProperty(value = "状态，0：禁用，1：启用，2：锁定")
+    @TableField(fill = FieldFill.INSERT)
     private Integer state;
 
     @ApiModelProperty(value = "逻辑删除，0：未删除，1：已删除")
     @Null(message = "逻辑删除不用传")
     @TableLogic
+    @TableField(fill = FieldFill.INSERT)
     private Integer deleted;
-
-    @ApiModelProperty(value = "版本")
-    @Null(message = "版本不用传")
-    @Version
-    private Integer version;
 
     @ApiModelProperty(value = "创建人ID")
     @TableField(fill = FieldFill.INSERT)
@@ -63,16 +59,23 @@ public class BaseEntity implements Serializable {
 
     @ApiModelProperty(value = "创建时间")
     @Null(message = "创建时间不用传")
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     @ApiModelProperty(value = "修改人ID")
-    @TableField(fill = FieldFill.UPDATE)
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Long updateId;
 
     @ApiModelProperty(value = "修改时间")
     @Null(message = "修改时间不用传")
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
     @ApiModelProperty(value = "排序")
     private Integer sort;
+
+    @ApiModelProperty(value = "版本")
+    @Null(message = "版本不用传")
+    @Version
+    private Integer version;
 }
