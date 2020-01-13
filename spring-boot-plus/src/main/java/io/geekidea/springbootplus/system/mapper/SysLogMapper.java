@@ -46,6 +46,7 @@ public interface SysLogMapper extends BaseMapper<SysLog> {
      */
     SysLogQueryVo getSysLogById(Serializable id);
 
+
     /**
      * 获取分页对象
      *

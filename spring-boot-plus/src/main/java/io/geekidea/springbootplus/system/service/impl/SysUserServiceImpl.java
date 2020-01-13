@@ -16,6 +16,7 @@
 
 package io.geekidea.springbootplus.system.service.impl;
 
+import com.baomidou.dynamic.datasource.annotation.DS;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -120,11 +121,13 @@ public class SysUserServiceImpl extends BaseServiceImpl<SysUserMapper, SysUser> 
     }
 
     @Override
+
     public SysUserQueryVo getSysUserById(Serializable id) throws Exception {
         return sysUserMapper.getSysUserById(id);
     }
 
     @Override
+    @DS("slave")
     public Paging<SysUserQueryVo> getSysUserPageList(SysUserQueryParam sysUserQueryParam) throws Exception {
         Page page = setPageParam(sysUserQueryParam, OrderItem.desc("create_time"));
         IPage<SysUserQueryVo> iPage = sysUserMapper.getSysUserPageList(page, sysUserQueryParam);

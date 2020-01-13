@@ -40,6 +40,8 @@ logging:
   #  方便Spring Boot Admin页面上实时查看日志
   file:
     name: logs/spring-boot-plus.log
+  level:
+    com.baomidou.dynamic: debug
 ################################ spring config end #################################
 
 
@@ -248,8 +250,8 @@ spring:
       pool-prepared-statements: true
       stat-view-servlet:
         enabled: true
-        login-password: druid123
-        login-username: druid
+        login-username: admin
+        login-password: 123456
         url-pattern: /druid/*
       test-on-borrow: false
       test-on-return: false

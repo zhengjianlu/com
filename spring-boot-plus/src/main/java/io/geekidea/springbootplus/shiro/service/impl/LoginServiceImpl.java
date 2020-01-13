@@ -16,6 +16,7 @@
 
 package io.geekidea.springbootplus.shiro.service.impl;
 
+import com.baomidou.dynamic.datasource.annotation.DS;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.geekidea.springbootplus.constant.CommonConstant;
 import io.geekidea.springbootplus.constant.CommonRedisKey;
@@ -97,7 +98,7 @@ public class LoginServiceImpl implements LoginService {
     @Autowired
     private RedisTemplate redisTemplate;
 
-    @Transactional(rollbackFor = Exception.class)
+//    @Transactional(rollbackFor = Exception.class)
     @Override
     public LoginSysUserTokenVo login(LoginParam loginParam) throws Exception {
         // 校验验证码
@@ -269,6 +270,7 @@ public class LoginServiceImpl implements LoginService {
     }
 
     @Override
+    @DS("slave")
     public SysUser getSysUserByUsername(String username) throws Exception {
         SysUser sysUser = new SysUser().setUsername(username);
         return sysUserMapper.selectOne(new QueryWrapper(sysUser));

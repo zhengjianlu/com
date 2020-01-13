@@ -16,6 +16,7 @@
 
 package io.geekidea.springbootplus;
 
+import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure;
 import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import io.geekidea.springbootplus.util.PrintApplicationInfo;
 import org.mybatis.spring.annotation.MapperScan;
@@ -42,7 +43,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableAdminServer
 @MapperScan({"io.geekidea.springbootplus.**.mapper"})
 @ServletComponentScan
-@SpringBootApplication
+@SpringBootApplication(exclude = DruidDataSourceAutoConfigure.class)
 public class SpringBootPlusApplication {
 
     public static void main(String[] args) {
