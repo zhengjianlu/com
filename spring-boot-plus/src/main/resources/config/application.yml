@@ -40,8 +40,8 @@ logging:
   #  方便Spring Boot Admin页面上实时查看日志
   file:
     name: logs/spring-boot-plus.log
-  level:
-    com.baomidou.dynamic: debug
+#  level:
+#    com.baomidou.dynamic: debug
 ################################ spring config end #################################
 
 

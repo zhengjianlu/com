@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25a70e34-d7c6-47e9-9d64-15580ed56562" name="Default Changelist" comment="" />
+    <list default="true" id="5fc0e200-f3fb-4ac0-a4ad-fe3ea87f207b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,18 +20,13 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1W93Nj8bOG6uFnhJUa2MrVwAuTN" />
+  <component name="ProjectId" id="1WMl0YZwuui8L8s21hcUG5jOtMg" />
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunDashboard">
@@ -51,12 +46,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="25a70e34-d7c6-47e9-9d64-15580ed56562" name="Default Changelist" comment="" />
-      <created>1578547944475</created>
+      <changelist id="5fc0e200-f3fb-4ac0-a4ad-fe3ea87f207b" name="Default Changelist" comment="" />
+      <created>1578967121347</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1578547944475</updated>
-      <workItem from="1578547945842" duration="65000" />
+      <updated>1578967121347</updated>
+      <workItem from="1578967127141" duration="60000" />
     </task>
     <servers />
   </component>
