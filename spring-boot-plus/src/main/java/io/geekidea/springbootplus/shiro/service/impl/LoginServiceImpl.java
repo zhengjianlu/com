@@ -270,7 +270,6 @@ public class LoginServiceImpl implements LoginService {
     }
 
     @Override
-    @DS("slave")
     public SysUser getSysUserByUsername(String username) throws Exception {
         SysUser sysUser = new SysUser().setUsername(username);
         return sysUserMapper.selectOne(new QueryWrapper(sysUser));

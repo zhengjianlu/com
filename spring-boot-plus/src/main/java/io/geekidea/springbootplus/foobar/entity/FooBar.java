@@ -18,8 +18,8 @@ import javax.validation.constraints.NotNull;
  * FooBar
  * </pre>
  *
- * @author geekidea
- * @since 2019-11-01
+ * @author zjl
+ * @since 2020-01-15
  */
 @Data
 @Accessors(chain = true)
@@ -29,12 +29,8 @@ public class FooBar extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "ID")
-    @TableId(value = "id", type = IdType.ID_WORKER)
-    private Long id;
-
-    @ApiModelProperty(value = "Name")
-    @NotBlank(message = "Name不能为空")
+    @ApiModelProperty(value = "名称")
+    @NotBlank(message = "名称不能为空")
     private String name;
 
     @ApiModelProperty(value = "Foo")
@@ -43,20 +39,5 @@ public class FooBar extends BaseEntity {
     @ApiModelProperty(value = "Bar")
     @NotBlank(message = "Bar不能为空")
     private String bar;
-
-    @ApiModelProperty(value = "Remark")
-    private String remark;
-
-    @ApiModelProperty(value = "State，0：Disable，1：Enable")
-    private Integer state;
-
-    @ApiModelProperty(value = "Version")
-    private Integer version;
-
-    @ApiModelProperty(value = "Create Time")
-    private Date createTime;
-
-    @ApiModelProperty(value = "Update Time")
-    private Date updateTime;
 
 }

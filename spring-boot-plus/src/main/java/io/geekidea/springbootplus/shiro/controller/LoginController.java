@@ -16,6 +16,7 @@
 
 package io.geekidea.springbootplus.shiro.controller;
 
+import com.baomidou.dynamic.datasource.annotation.DS;
 import io.geekidea.springbootplus.common.api.ApiResult;
 import io.geekidea.springbootplus.shiro.cache.LoginRedisService;
 import io.geekidea.springbootplus.shiro.param.LoginParam;

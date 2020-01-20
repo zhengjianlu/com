@@ -17,9 +17,9 @@
 package io.geekidea.springbootplus.test;
 
 /**
- * spring-boot-plus代码生成器入口类
+ * 代码生成器入口类
  *
- * @author geekidea
+ * @author zjl
  * @date 2019-10-22
  **/
 public class SpringBootPlusGenerator {

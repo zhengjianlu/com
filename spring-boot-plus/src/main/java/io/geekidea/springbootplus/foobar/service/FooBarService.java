@@ -13,8 +13,8 @@ import java.io.Serializable;
  * FooBar 服务类
  * </pre>
  *
- * @author geekidea
- * @since 2019-11-01
+ * @author zjl
+ * @since 2020-01-15
  */
 public interface FooBarService extends BaseService<FooBar> {
 

@@ -13,8 +13,8 @@ import java.util.Date;
  * FooBar 查询结果对象
  * </pre>
  *
- * @author geekidea
- * @date 2019-11-01
+ * @author zjl
+ * @date 2020-01-15
  */
 @Data
 @Accessors(chain = true)
@@ -22,10 +22,10 @@ import java.util.Date;
 public class FooBarQueryVo implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "ID")
+    @ApiModelProperty(value = "主键")
     private Long id;
 
-    @ApiModelProperty(value = "Name")
+    @ApiModelProperty(value = "名称")
     private String name;
 
     @ApiModelProperty(value = "Foo")
@@ -34,19 +34,19 @@ public class FooBarQueryVo implements Serializable {
     @ApiModelProperty(value = "Bar")
     private String bar;
 
-    @ApiModelProperty(value = "Remark")
+    @ApiModelProperty(value = "备注")
     private String remark;
 
-    @ApiModelProperty(value = "State，0：Disable，1：Enable")
+    @ApiModelProperty(value = "状态，0：禁用，1：启用")
     private Integer state;
 
-    @ApiModelProperty(value = "Version")
+    @ApiModelProperty(value = "版本")
     private Integer version;
 
-    @ApiModelProperty(value = "Create Time")
+    @ApiModelProperty(value = "创建时间")
     private Date createTime;
 
-    @ApiModelProperty(value = "Update Time")
+    @ApiModelProperty(value = "修改时间")
     private Date updateTime;
 
 }

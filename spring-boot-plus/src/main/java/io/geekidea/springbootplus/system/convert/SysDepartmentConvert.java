@@ -34,6 +34,7 @@ public interface SysDepartmentConvert {
 
     SysDepartmentConvert INSTANCE = Mappers.getMapper(SysDepartmentConvert.class);
 
+
     /**
      * SysDepartment转换成SysDepartmentTreeVo对象
      *

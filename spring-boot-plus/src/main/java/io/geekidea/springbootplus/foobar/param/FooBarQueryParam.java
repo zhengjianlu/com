@@ -12,8 +12,8 @@ import io.geekidea.springbootplus.common.param.OrderQueryParam;
  * FooBar 查询参数对象
  * </pre>
  *
- * @author geekidea
- * @date 2019-11-01
+ * @author zjl
+ * @date 2020-01-15
  */
 @Data
 @Accessors(chain = true)

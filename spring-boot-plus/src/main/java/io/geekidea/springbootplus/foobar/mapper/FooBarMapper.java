@@ -16,8 +16,8 @@ import java.io.Serializable;
  * FooBar Mapper 接口
  * </pre>
  *
- * @author geekidea
- * @since 2019-11-01
+ * @author zjl
+ * @since 2020-01-15
  */
 @Repository
 public interface FooBarMapper extends BaseMapper<FooBar> {

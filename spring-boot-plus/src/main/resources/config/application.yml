@@ -284,11 +284,11 @@ swagger:
   base:
     package: io.geekidea.springbootplus
   contact:
-    email: geekidea@qq.com
-    name: geekidea
+    email: 49710286@qq.com
+    name: zjl
     url: ''
   description: ''
-  title: spring-boot-plus
+  title: '接口文档'
   url: ''
   version: 1.0
 #################################### Swagger end ###################################
@@ -327,4 +327,3 @@ info:
   project-mybatis-plus-version: '@mybatis-plus-boot-starter.version@'
   project-version: '@project.version@'
 ############################## Spring boot admin end ###############################
-
